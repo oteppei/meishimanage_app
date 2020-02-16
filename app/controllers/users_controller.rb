@@ -16,4 +16,8 @@ class UsersController < ApplicationController
   else
     render(users/new)
   end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
 end

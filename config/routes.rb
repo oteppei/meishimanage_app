@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # Users controller
   get 'signup' => "users#new"
   post "/users/create" => "users#create"
+  get "/users/:id/edit" => "users#edit"
+  get "users/:id/show" => "users#show"
 
   # Home controller
   get '/' => "home#top"
