@@ -18,19 +18,22 @@
       <%= link_to("名刺管理Appとは", "/about") %>
      </div>
      <ul class = "header-menus">
-      <li>
-       <%= link_to("新規登録", "cards/new") %>
+      <% if @current_user %>
+       <li>
+       <%= link_to("名刺登録", "cards/new") %>
       </li>
       <li>
        <%= link_to("名刺情報一覧", "cards/index") %>
       </li>
-      <% if @current_user %>
        <li>
         <%= link_to("ログアウト", "/logout", {method: :post}) %>
        </loi>
       <% else %>
        <li>
         <%= link_to("ログイン", "/login") %>
+       </li>
+       <li>
+        <%= link_to("新規登録", "/new") %>
        </li>
       <% end %>
      </ul>
