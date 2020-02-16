@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Users controller
-  get '/new' => "users#new"
+  get 'signup' => "users#new"
   post "/users/create" => "users#create"
 
   # Home controller
