@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'signup' => "users#new"
   post "/users/create" => "users#create"
   get "/users/:id/edit" => "users#edit"
-  get "users/:id/show" => "users#show"
+  get "users/:id/" => "users#show"
+  get "/login" => "/users#login_form"
 
   # Home controller
   get '/' => "home#top"
