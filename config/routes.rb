@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   post "/users/create" => "users#create"
   get "/users/:id/edit" => "users#edit"
   get "users/:id/" => "users#show"
-  get "/login" => "/users#login_form"
-  post "login" => "/users$login"
+  get "/login" => "users#login_form"
+  post "login" => "users$login"
+  post "/logout" => "users#logout"
 
   # Home controller
   get '/' => "home#top"
