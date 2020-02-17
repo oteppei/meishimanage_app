@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/users/:id/edit" => "users#edit"
   get "users/:id/" => "users#show"
   get "/login" => "/users#login_form"
+  post "login" => "/users$login"
 
   # Home controller
   get '/' => "home#top"
