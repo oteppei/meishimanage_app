@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'cards/new'
+  get 'cards/new' => "cards#new"
   # Users controller
   get 'signup' => "users#new"
   post "/users/create" => "users#create"
