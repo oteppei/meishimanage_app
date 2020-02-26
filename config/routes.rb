@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  #Cards controller
   get 'cards/new' => "cards#new"
+  post 'cards/create' => "cards#create"
+  get 'cards/:id/index' => "cards#index"
   # Users controller
   get 'signup' => "users#new"
   post "/users/create" => "users#create"
